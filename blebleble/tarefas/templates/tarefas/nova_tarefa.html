@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+<div class="row">
+  {% block body %}
+  <h1>Nova Tarefa</h1>
+    <form class="" action="" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="{{ form.nome.id_for_label }}">Nome</label>
+        {{ form.nome}}
+      </div>
+      <div class="form-group">
+        <label for="{{ form.descricao.id_for_label }}">Descrição</label>
+        {{ form.descricao}}
+    </div>
+    <div class="form-group">
+      <label for="{{ form.data_final.descricao.id_for_label }}">Data Final</label>
+      {{ form.data_final}}
+    </div>
+    <div class="form-group">
+      <label for="{{ form.prioridade.descricao.id_for_label }}">Prioridade</label>
+      {{ form.prioridade}}
+    </div>
+    <div class="form-group">
+      <label for="{{ form.categoria.descricao.id_for_label }}">Categoria</label>
+      {{ form.categoria}}
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+
+    </form>
+  {% endblock body%}
+</div>

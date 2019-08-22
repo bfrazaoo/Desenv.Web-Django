@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <h1>Lista de Categorias</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Categoria</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for c in categorias %}
+        <tr>
+          <td>{{c.nome}}</td>
+          <td>{{c.descricao}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <<a href="{% url 'tarefas:nova_categoria' %}" class="btn">Adicionar Categoria</a>
+{% endblock body %}
